@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JUNHO PORTFOLIO</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <Link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="./js/jquery-latest.js"></script>
+    <link rel="icon" href="./image/favicon.ico">
+</head>
+<body>
+  <ul class="gnb" id="quick">
+    <li><a href="#section1" class="active"></a></li>
+    <li><a href="#section2"></a></li>
+    <li><a href="#section3"></a></li>
+    <li><a href="#section4"></a></li>
+    <li><a href="#section5"></a></li>
+  </ul>
+  <section class="Header_Section" id="section1">
+    <div class="inner">
+    <div class="header">
+        <a href class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <ul class="gnb">
+          <li><a href="#section1">Home</a></li>
+          <li><a href="#section2">About</a></li>
+          <li><a href="#section3">skill</a></li>
+          <li><a href="#section4">Porfolio</a></li>
+          <li><a href="#section5">Contect</a></li>
+        </ul>
+      </div>
+      <div class="ham_menu">
+        <a href="" class="x">
+          <span></span>
+          <span></span>
+        </a>
+        <ul>
+          <li><a href="#section1">Home</a></li>
+          <li><a href="#section2">About</a></li>
+          <li><a href="#section3">skill</a></li>
+          <li><a href="#section4">Porfolio</a></li>
+          <li><a href="#section5">Contect</a></li>
+        </ul>
+      </div>
+      <img id="ch" src="./image/char.png"/>
+      <div class="header_text">
+        <h1 id="typingText">
+          <img src="./image/p1.png"/>
+        </h1>
+        <h1 id="typingText1"></h1>
+        <script>
+          const textElement = document.getElementById('typingText');
+          const textElement1 = document.getElementById('typingText1');
+          const text = "Hello"; // 첫 번째 텍스트
+          const text1 = "I'm JunHo"; // 두 번째 텍스트
+          let index = 0; // 현재 텍스트의 인덱스
+        
+          function typeText() {
+            textElement.innerHTML += text[index];
+            index++;
+        
+            if (index < text.length) {
+              setTimeout(typeText, 100); // 다음 글자를 0.1초마다 표시
+            } else {
+              // 첫 번째 텍스트가 모두 표시되면 두 번째 텍스트를 시작
+              index = 0;
+              setTimeout(typeText1, 100);
+            }
+          }
+        
+          function typeText1() {
+            textElement1.innerHTML += text1[index];
+            index++;
+        
+            if (index < text1.length) {
+              setTimeout(typeText1, 100); // 다음 글자를 0.1초마다 표시
+            }
+          }
+        
+          // 페이지 로드 후 첫 번째 텍스트 타이핑 시작
+          window.addEventListener('load', () => {
+            typeText();
+          });
+        </script>
+      </div>
+
+      <div class="header_scroll" >
+        <img src="./image/scroll.png">
+        <p>Scroll down</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="Intro_Section" id="section2">
+    <div class="inner">
+      <h2>About me</h2>
+      <p>#열정   #도전정신   #집중력</p>
+        <div class="profile">
+          <div class="profile_i">
+            <h3>저에 대한 정보<br> 입니다.</h3>
+            <nav>
+              <p>
+                <b>제이름은</b>
+                : 박준호
+              </p>
+              <p>
+                <b>생년월일</b>
+                : 1998
+              </p>
+              <p>
+                <b>전화번호</b>
+                : 010-4921-9023</p>
+              <p>
+                <b>이메일은</b>
+                : hqmotpom@naver.com
+              </p>
+            </nav>
+          </div>
+          <div class="profile_i">
+            <h3>저의 학력과<br>배운 내용입니다.</h3>
+            <nav>
+              <b>우송정보대 컴퓨터정보과</b>
+                <p>2017.03~2021.03</p>
+              <b>그린컴퓨터아트학원</b>
+              <p>2023.04~2023.10</p>
+            </nav>
+          </div>
+          <div class="profile_i">
+            <h3>저랑 같이<br>  일하시게되면요</h3>
+            <nav>
+              <p>겸손한 자세로 끈임없이 발전하고 배울수있는 사람이 될 수 있도록 노력하겠습니다</p>
+            </nav>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="Skill_Section" id="section3">
+    <div class="inner">
+      <h2>Skills</h2>
+      <p>저는 아래에 있는 프로그래밍 언어를 잘 다룹니다. 지금도 다양한 언어를 배우고 익히며 성장 하는 중!</p>
+      <div class="skill_content">
+        <div>
+          <nav data-number="90"  class="active_s">0%</nav>
+          <img src="./image/html.png" alt="html">
+          <p>HTML</p>
+        </div>
+        <div>
+          <nav data-number="90">0%</nav>
+          <img src="./image/css.png" alt="css">
+          <p>CSS</p>
+        </div>
+        <div>
+          <nav data-number="80">0%</nav>
+          <img src="./image/javascript.png" alt="javascript">
+          <p>JAVASCRIPT</p>
+        </div>
+        <div>
+          <nav data-number="90">0%</nav>
+          <img src="./image/react.png" alt="react">
+          <p>REACT</p>
+        </div>
+        <div>
+          <nav data-number="80">0%</nav>
+          <img src="./image/github1.png" alt="github">
+          <p>GITHUB</p>
+        </div>
+        <div>
+          <nav data-number="80">0%</nav>
+          <img src="./image/git.png" alt="git">
+          <p>GIT</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="Portfolio_Section" id="section4">
+    <div class="inner">
+        <h2>Portfolio</h2>
+        <p>제가 진행한 프로젝트들 입니다.</p>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="content_item">
+                      <div class="c_image">
+                        <img src="./image/computer1.png" alt="">
+                      </div>
+                        <div class="ci">
+                          <nav>
+                            <img src="./image/Vector.png" alt="check"><b>제목</b>
+                            <p>와제주사이트 리뉴얼</p>
+                          </nav>
+                          <nav>
+                            <img src="./image/Vector.png" alt="check"><b>GitHub</b>
+                            <a href="https://github.com/junHo9887/Portfolio.git">https://github.com/junHo9887/Portfolio.git</a>
+                          </nav>
+                          <nav>
+                            <img src="./image/Vector.png" alt="check"><b>URL</b>
+                            <a href="https://wajaeju.netlify.app
+                            ">https://wajaeju.netlify.app</a>
+                          </nav>
+                          <nav>
+                            <img src="./image/Vector.png" alt="check"><b>Frontend</b>
+                            <p>HTML,CSS,JAVASCRIPT</p>
+                          </nav>
+                        </div>
+                   
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="content_item">
+                    <div class="c_image">
+                      <img src="./image/computer2.png" alt="">
+                    </div>
+                      <div class="ci">
+                        <nav>
+                          <img src="./image/Vector.png" alt="check"><b>제목</b>
+                          <p>한국소비자교육원 리뉴얼</p>
+                        </nav>
+                        <nav>
+                          <img src="./image/Vector.png" alt="check"><b>GitHub</b>
+                          <a href="https://github.com/junHo9887/Teample3.git">https://github.com/junHo9887/Teample3.git</a>
+                        </nav>
+                        <nav>
+                          <img src="./image/Vector.png" alt="check"><b>URL</b>
+                          <a href="https://junho9887.github.io/Teample3/
+                          ">https://junho9887.github.io/Teample3/</a>
+                        </nav>
+                        <nav>
+                          <img src="./image/Vector.png" alt="check"><b>Frontend</b>
+                          <p>HTML,CSS,JAVASCRIPT</p>
+                        </nav>
+                      </div>
+              
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content_item">
+                  <div class="c_image">
+                    <img src="./image/computer3.png" alt="">
+                  </div>
+                    <div class="ci">
+                      <nav>
+                        <img src="./image/Vector.png" alt="check"><b>제목</b>
+                        <p>놀먹(리액트)</p>
+                      </nav>
+                      <nav>
+                        <img src="./image/Vector.png" alt="check"><b>GitHub</b>
+                        <a href="https://github.com/stemisruler/Team_Utility_creation_Nolmug.git">https://github.com/stemisruler/Team_Utility_creation_Nolmug.git</a>
+                      </nav>
+                      <nav>
+                        <img src="./image/Vector.png" alt="check"><b>URL</b>
+                        <a href="https://nolmug.netlify.app/
+                        ">https://nolmug.netlify.app/</a>
+                      </nav>
+                      <nav>
+                        <img src="./image/Vector.png" alt="check"><b>Frontend</b>
+                        <p>HTML,CSS,JAVASCRIPT</p>
+                      </nav>
+                    </div>
+              
+                </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="content_item">
+                <div class="c_image">
+                  <img src="./image/computer4.png" alt="">
+                </div>
+                  <div class="ci">
+                    <nav>
+                      <img src="./image/Vector.png" alt="check"><b>제목</b>
+                      <p>JGV(리액트)</p>
+                    </nav>
+                    <nav>
+                      <img src="./image/Vector.png" alt="check"><b>GitHub</b>
+                      <a href="https://github.com/junHo9887/movie.git">https://github.com/junHo9887/movie.git</a>
+                    </nav>
+                    <nav>
+                      <img src="./image/Vector.png" alt="check"><b>URL</b>
+                      <a href="https://movie98.netlify.app/
+                      ">https://movie98.netlify.app/</a>
+                    </nav>
+                    <nav>
+                      <img src="./image/Vector.png" alt="check"><b>Frontend</b>
+                      <p>HTML,CSS,JAVASCRIPT</p>
+                    </nav>
+                  </div>
+              </div>
+            </div>
+          </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+  
+  <section class="Epilogue_Section" id="section5">
+    <div class="inner">
+      <h2>Contect</h2>
+      <div>
+        <ul>
+          <li><b>전화번호:</b> 010-4921-9023</li>
+          <li><b>E-MAIL:</b> hqmotpom@naver.com</li>
+          <li><b>깃허브:</b> github.com/junho9887</li>
+          <nav class="E_img">
+            <a href="https://github.com/junho9887">
+              <img src="./image/github.png" alt="">
+            </a>
+            <a href="">
+              <img src="./image/insta.png" alt="">
+            </a>
+            <a href="">
+              <img src="./image/facebook.png" alt="">
+            </a>
+          </nav>
+        </ul>
+        <nav class="E_item">
+          <img src="./image/myphoto2.jpg" alt="" id="am">
+        </nav>
+      </div>
+    </div>
+  </section>
+  <!-- 1.네비게이션,로고,이메일,SNS 등
+  2.짧은 인트로 애니메이션, 자신을 표현하는 대표적인 텍스트
+  3.사진,직장 경력, 교육 경력(최정 학교 전공,퍼블리깅 교육기관),활동경력,자격사항,자신의 정체성을 표현하는 몇줄의글
+  4.사용 퍼블리싱 결과물, 모바일 웹 앱 퍼블리싱 결과물, 실정 퍼블리싱 결과물 그래픽 결과물
+  5.웹사이트 퍼블리싱 결과물, 모바일 웹 앱 퍼블리싱 결과물, 실전 퍼블리싱 결과물, 그래픽 결과물(옵션사항)웹사이트 퍼블리싱 결과물, 모바일 웹 앱 퍼블리싱 결과물, 실전 퍼블리싱 결과물, 그래픽 결과물(옵션사항)
+  6.신입 프론트엔드 개발자로서 장점(책임감,겸손 등), 마음을 몇 줄로 짧게 정리한 내용 -->
+  <script src="./js/index.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+            // Swiper 초기화
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+</script>
+</body>
+</html>
